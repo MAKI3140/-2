@@ -1,0 +1,284 @@
+@charset "UTF-8";
+
+/* --- 1. 管理者ログインページ (admin_login.php) --- */
+.admin-login-body {
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.admin-login-container { width: 100%; max-width: 400px; text-align: center; }
+.admin-login-box {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+.admin-login-logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--auth-text-dark);
+  margin: 0 0 15px 0;
+}
+.admin-login-lead { font-size: 14px; color: #555; margin-bottom: 20px; }
+
+.admin-error-message {
+  color: #D8000C; 
+  background-color: #FFBABA; 
+  border: 1px solid #D8000C;
+  padding: 10px; 
+  margin-bottom: 20px; 
+  border-radius: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+.admin-error-message p { margin: 0; }
+
+.admin-form-group { margin-bottom: 15px; text-align: left; }
+.admin-form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+.admin-form-group input[type="email"],
+.admin-form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+.admin-form-group-checkbox {
+  text-align: left;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.admin-form-group-checkbox input { margin-right: 8px; accent-color: var(--brand-red); }
+
+.admin-login-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.admin-login-button:hover { background-color: #0056b3; }
+.admin-login-footer { font-size: 12px; color: #888; }
+
+
+/* --- 2. 管理ダッシュボード (admin_dashboard.php) --- */
+.admin-dash-body {
+  background-color: #f7f7f7;
+  padding: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.admin-dash-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  
+  height: calc(100% - 40px);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.admin-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+.admin-dash-header h2 { margin: 0; font-size: 24px; }
+
+.admin-button-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.admin-button-primary:hover { background-color: #0056b3; }
+.admin-button-icon {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.admin-button-icon:hover { background-color: #f0f0f0; }
+
+.admin-filter-box {
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.admin-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.admin-filter-label { font-weight: 600; margin-right: 10px; }
+.admin-filter-row select {
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.admin-filter-add { margin-left: auto; }
+
+.admin-table-container {
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  min-height: 0;
+}
+.admin-table-container table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.admin-table-container th,
+.admin-table-container td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+.admin-table-container th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+  box-shadow: 0 2px 2px -1px rgba(0,0,0,0.1);
+}
+
+.admin-badge-success {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.admin-badge-default {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.admin-action-cell { text-align: right; }
+.admin-action-dropdown { position: relative; display: inline-block; }
+.admin-button-icon-menu {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.admin-button-icon-menu:hover { background-color: #f0f0f0; }
+.admin-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background-color: var(--white);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  min-width: 100px;
+  overflow: hidden;
+}
+.admin-action-dropdown:hover .admin-dropdown-content { display: block; }
+.admin-dropdown-content a,
+.admin-dropdown-item-delete {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--auth-text-dark);
+  font-size: 14px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.admin-dropdown-content a:hover,
+.admin-dropdown-item-delete:hover { background-color: #f5f5f5; }
+.admin-dropdown-item-delete { color: var(--brand-red); }
+
+.admin-dash-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
+  color: #555;
+  
+  flex-shrink: 0;
+  background-color: var(--white);
+  padding-bottom: 5px;
+}
+.admin-export a { color: #007bff; text-decoration: none; }
+.admin-export a:hover { text-decoration: underline; }
+
+.admin-button-danger {
+  background-color: var(--brand-red);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.admin-button-danger:hover { background-color: #B71C1C; }
+
+.admin-header-actions { display: flex; gap: 10px; }

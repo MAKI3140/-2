@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+/* 役割ごとに分割したCSSを読み込む */
+@import url("base.css");
+@import url("user.css");
+@import url("admin.css");
